@@ -2,3 +2,10 @@
 
 <button class="btn btn-primary btn-lg" onclick="clickme()">Click me</button>
 
+<div class="row">
+	<% @products.each do |item|%>
+		<div class="col-md-3">
+			<p><img src="<%= item.path_to_image %>"></p>
+		</div>
+	<% end %>
+</div>
