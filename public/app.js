@@ -1,9 +1,8 @@
-if (window.localStorage.getItem('dd') == nill) { window.localStorage.setItem('dd', 0)}
 function clickme()
 	{
 		
-		var x = window.localStorage.getItem('dd');
+		var x = window.localStorage.getItem('eee')*1;
 		x++;
+		window.localStorage.setItem('eee', x)
 		alert(x);
-		window.localStorage.setItem('dd', x)
 	}
