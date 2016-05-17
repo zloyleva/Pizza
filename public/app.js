@@ -6,3 +6,8 @@ function clickme()
 		window.localStorage.setItem('eee', x)
 		alert(x);
 	}
+
+function add_to_cart()
+{
+	alert('Pizza adder from card')
+}
