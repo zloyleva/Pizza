@@ -10,7 +10,7 @@
 				<div><b>Size:</b> <%= item.size %> cm</div>
 				<div><b>Description:</b> <%= item.description %></div>
 			</div>
-			<button class="btn btn-success" onClick="add_to_cart()">Add to card</button>
+			<button class="btn btn-success" onClick="add_to_cart(<%= item.id %>)">Add to card</button>
 		</div>
 	<% end %>
 </div>

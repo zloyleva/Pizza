@@ -7,7 +7,7 @@ function clickme()
 		alert(x);
 	}
 
-function add_to_cart()
+function add_to_cart(id)
 {
-	alert('Pizza adder from card')
+	alert('Pizza adder with ID: ' + id)
 }
