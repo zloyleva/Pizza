@@ -34,3 +34,16 @@ function total_sc()
 	}
 	document.getElementById("total").innerHTML = total;
 }
+
+function cart_get_orders()
+{
+	var orders = '';
+	for (var i = 0; i < localStorage.length; i++) {
+		var value = window.localStorage.key(i);
+		//Check key='product_'?
+		if (value.indexOf('product_') == 0) {
+			orders += value + '=' + localStorage.getItem(value)*1 + ',';
+		}
+	}
+	return orders;
+}
