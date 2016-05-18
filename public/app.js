@@ -8,13 +8,25 @@ function clickme()
 	}
 
 function add_to_cart(id)
-{
-	var x = window.localStorage.getItem('product_' + id)*1;
-	x++;
-	window.localStorage.setItem('product_' + id, x);
-	alert(x);
-}
+	{
+		var key = 'product_' + id;
+		var x = window.localStorage.getItem(key)*1;
+		x++;
+		window.localStorage.setItem(key, x);
+		alert(x);
+	}
+
 function remove_from_cart(id)
+	{
+		var key = 'product_' + id;
+		window.localStorage.removeItem(key);
+	}
+
+function total_sc()
 {
-	window.localStorage.removeItem('product_' + id);
+	var total = 0;
+	for (var i = 1; i < localStorage.length + 1; i++) {
+			total += localStorage.getItem('product_' + i)*1;
+		}
+	document.getElementById("total").innerHTML = total;
 }
