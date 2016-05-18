@@ -26,7 +26,11 @@ function total_sc()
 {
 	var total = 0;
 	for (var i = 0; i < localStorage.length; i++) {
-			total += localStorage.getItem(window.localStorage.key(i))*1;
+		var value = window.localStorage.key(i);
+		//Check key='product_'?
+		if (value.indexOf('product_') == 0) {
+			total += localStorage.getItem(value)*1;
 		}
+	}
 	document.getElementById("total").innerHTML = total;
 }
