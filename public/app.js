@@ -25,8 +25,8 @@ function remove_from_cart(id)
 function total_sc()
 {
 	var total = 0;
-	for (var i = 1; i < localStorage.length + 1; i++) {
-			total += localStorage.getItem('product_' + i)*1;
+	for (var i = 0; i < localStorage.length; i++) {
+			total += localStorage.getItem(window.localStorage.key(i))*1;
 		}
 	document.getElementById("total").innerHTML = total;
 }
