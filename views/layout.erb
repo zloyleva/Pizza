@@ -38,9 +38,14 @@
 			      <li><a href="/something">Something</a></li>
 			      <li><a href="/contacts">Contacts</a></li>
 			    </ul>
-			    <ul class="nav navbar-nav navbar-right">
-			    	<li><a href="#"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Cart()</a></li>
-			    </ul>
+			    <form action="/cart" method="POST">
+			    	<input type="text" name="orders" />
+				    <ul class="nav navbar-nav navbar-right">
+				    	<li>
+				    		<input type="submit" class="btn btn-info cart" value="Cart()" />
+				    	</li>
+				    </ul>
+			    </form>
 			  </div><!--/.nav-collapse -->
 			</nav>
 
