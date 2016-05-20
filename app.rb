@@ -22,5 +22,8 @@ get '/cart' do
 end
 
 post '/cart' do
-  erb "Cart"
+	@orders_pizza = params[:orders].split(",")
+	@products = Product.all
+
+	erb :cart
 end

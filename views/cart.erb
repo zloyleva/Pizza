@@ -1,0 +1,34 @@
+<h2>Cart list</h2>
+
+<table class="table">	
+<thead>
+	<tr>
+		<th>Pizza</th>
+		<th>Picture</th>
+		<th>Price</th>
+		<th>Count</th>
+		<th>Final</th>
+</thead>
+<% @total = 0 %>
+<tbody>
+	<% @orders_pizza.each do |item| %>
+	<% key = (item.split('=')[0]).split('_')[1] %>
+	<% value = item.split('=')[1] %>
+	<% list = @products.find(key) %>
+	<% final_price = list[:price].to_i*value.to_i %>
+	<tr>
+		<td><%= list[:title] %></td>
+		<td><img src="<%= list[:path_to_image] %>"> </td>
+		<td><%= list[:price] %></td></td>
+		<td><%= value %></td>
+		<td><%= final_price %></td>
+		<% @total += final_price %>
+	</tr>
+<% end %>
+	<tr>
+		<td></td><td></td><td></td>
+		<td>Final</td>
+		<td><%= @total %></td>
+	</tr>
+</tbody>
+</table>
