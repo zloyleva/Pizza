@@ -33,5 +33,8 @@ post '/cart' do
 end
 
 post '/place_order' do
-  "Hello World"
+
+	@get_order = Order.create params[:form_order]
+
+	erb :thanks
 end

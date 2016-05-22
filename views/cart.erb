@@ -36,7 +36,7 @@
 </table>
 
 <form action="/place_order" method="post">
-	<input name="form_order[orders_string]" type="hidden" value="<%= @orders_pizza %>" />
+	<input name="form_order[orders_string]" id="local_data" type="hidden" value="" />
 	<div class="form-group">
 	    <label>Your name</label>
 	    <input name="form_order[name]" type="text" class="form-control" placeholder="Enter your name" value="">
@@ -51,3 +51,11 @@
  	</div>
 	<button type="submit" class="btn btn-primary">Place this order</button>
 </form>
+
+<script type="text/javascript">
+	function update_orders_input()
+		{
+			var local = cart_get_orders();
+			$('#local_data').val(local);
+		}
+</script>
