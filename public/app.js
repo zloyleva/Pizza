@@ -61,5 +61,6 @@ function cancel_order()
 	window.localStorage.clear();
 	update_orders_input();
 	update_orders_button();
+	$('#cart_row').text('You cart is now empty')
 	return false;
 }
